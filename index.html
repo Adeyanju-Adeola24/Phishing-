@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX-991CW ClassWiz Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="brand-header">
+                <div class="brand-name">CASIO</div>
+                <div class="model-name">fx-991CW ClassWiz</div>
+            </div>
+            
+            <div class="display-section">
+                <div class="display">
+                    <div class="display-history" id="history"></div>
+                    <div class="display-main" id="display">0</div>
+                </div>
+                <div class="mode-indicators">
+                    <span class="mode" id="deg-mode">DEG</span>
+                    <span class="mode" id="calc-mode">COMP</span>
+                </div>
+            </div>
+
+            <div class="keypad">
+                <!-- Row 1 - Function keys -->
+                <div class="key-row">
+                    <button class="key function-key" data-action="shift">SHIFT</button>
+                    <button class="key function-key" data-action="alpha">ALPHA</button>
+                    <button class="key function-key" data-action="mode">MODE</button>
+                    <button class="key function-key" data-action="setup">SETUP</button>
+                    <button class="key function-key" data-action="clear">AC</button>
+                </div>
+
+                <!-- Row 2 - Math functions -->
+                <div class="key-row">
+                    <button class="key function-key" data-action="reciprocal">
+                        <span class="main">x⁻¹</span>
+                        <span class="shift">x!</span>
+                    </button>
+                    <button class="key function-key" data-action="square">
+                        <span class="main">x²</span>
+                        <span class="shift">√x</span>
+                    </button>
+                    <button class="key function-key" data-action="power">
+                        <span class="main">xʸ</span>
+                        <span class="shift">ʸ√x</span>
+                    </button>
+                    <button class="key function-key" data-action="log">
+                        <span class="main">log</span>
+                        <span class="shift">10ˣ</span>
+                    </button>
+                    <button class="key function-key" data-action="ln">
+                        <span class="main">ln</span>
+                        <span class="shift">eˣ</span>
+                    </button>
+                </div>
+
+                <!-- Row 3 - Trig functions -->
+                <div class="key-row">
+                    <button class="key function-key" data-action="deg">
+                        <span class="main">(-)</span>
+                        <span class="shift">°'"</span>
+                    </button>
+                    <button class="key function-key" data-action="sin">
+                        <span class="main">sin</span>
+                        <span class="shift">sin⁻¹</span>
+                    </button>
+                    <button class="key function-key" data-action="cos">
+                        <span class="main">cos</span>
+                        <span class="shift">cos⁻¹</span>
+                    </button>
+                    <button class="key function-key" data-action="tan">
+                        <span class="main">tan</span>
+                        <span class="shift">tan⁻¹</span>
+                    </button>
+                    <button class="key operation-key" data-action="divide">÷</button>
+                </div>
+
+                <!-- Row 4 - Numbers and operations -->
+                <div class="key-row">
+                    <button class="key function-key" data-action="memory">
+                        <span class="main">RCL</span>
+                        <span class="shift">STO</span>
+                    </button>
+                    <button class="key number-key" data-number="7">7</button>
+                    <button class="key number-key" data-number="8">8</button>
+                    <button class="key number-key" data-number="9">9</button>
+                    <button class="key operation-key" data-action="multiply">×</button>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="key-row">
+                    <button class="key function-key" data-action="eng">
+                        <span class="main">ENG</span>
+                        <span class="shift">←</span>
+                    </button>
+                    <button class="key number-key" data-number="4">4</button>
+                    <button class="key number-key" data-number="5">5</button>
+                    <button class="key number-key" data-number="6">6</button>
+                    <button class="key operation-key" data-action="subtract">-</button>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="key-row">
+                    <button class="key function-key" data-action="brackets">
+                        <span class="main">( )</span>
+                        <span class="shift">%</span>
+                    </button>
+                    <button class="key number-key" data-number="1">1</button>
+                    <button class="key number-key" data-number="2">2</button>
+                    <button class="key number-key" data-number="3">3</button>
+                    <button class="key operation-key" data-action="add">+</button>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="key-row">
+                    <button class="key function-key" data-action="s-sum">
+                        <span class="main">S-SUM</span>
+                        <span class="shift">STAT</span>
+                    </button>
+                    <button class="key number-key zero" data-number="0">0</button>
+                    <button class="key function-key" data-action="decimal">.</button>
+                    <button class="key function-key" data-action="exp">
+                        <span class="main">×10ˣ</span>
+                        <span class="shift">Ans</span>
+                    </button>
+                    <button class="key equals-key" data-action="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
