@@ -1,0 +1,34 @@
+{
+  "database": {
+    "rules": {
+      "notifications": {
+        ".read": true,
+        ".write": "auth != null"
+      },
+      "events": {
+        ".read": true,
+        ".write": "auth != null"
+      },
+      "prayers": {
+        ".read": "auth != null",
+        ".write": true,
+        ".indexOn": ["timestamp", "public"]
+      },
+      "books": {
+        ".read": true,
+        ".write": "auth != null",
+        ".indexOn": ["timestamp"]
+      }
+    }
+  },
+  "storage": {
+    "rules": {
+      "service": "firebase.storage",
+      "match": "/b/{bucket}/o",
+      "allow": {
+        "read": true,
+        "write": "request.auth != null && resource.contentType.matches('application/pdf')"
+      }
+    }
+  }
+}
